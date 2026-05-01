@@ -88,9 +88,9 @@ vivid_mud.App(__name__,
               title=settings.APP_NAME,
               public_url=settings.PUBLIC_URL,
               server_host=settings.SERVER_HOST,
-              server_port=settings.SERVER_PORT,
-              web_client_port=settings.WEB_CLIENT_PORT,
+              server_port=int(settings.SERVER_PORT),
+              web_client_port=int(settings.WEB_CLIENT_PORT),
               web_client_host=settings.WEB_CLIENT_HOST,
               module_log=settings.MODULE_LOG_FILE,
               server_log=settings.SERVER_LOG_FILE
-              ).run()
+            ).run()
